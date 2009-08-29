@@ -51,6 +51,22 @@ p {
 #header h1 a span {
   display: none;
 }
+#header ul {
+  float: right;
+  list-style: none;
+}
+#header ul li{
+  float: left;
+  margin-left: 1.3em;
+}
+#header ul li a {
+  padding: 0.7em 1.3em;
+  display: block;
+  font-size: 1.3em;
+  color: #000000;
+  background: #EFE229;
+  text-decoration: none;
+}
 
 #content {
   background: url('../images/bg_content.png') repeat-x top;
@@ -59,12 +75,12 @@ p {
   background: #FFFFFF;
 }
 #content .maincolumn {
-  padding: 20px 0 20px 20px;
+  padding: 20px 20px 20px 20px;
   float: left;
-  width: 691px;
+  width: 671px;
 }
 #content .sidebar {
-  padding: 1em;
+  padding: 20px 20px 20px 0;
   float: left;
   width: 220px;
 }
@@ -83,4 +99,8 @@ p {
   color: #888888;
   font-style: italic;
   font-family: times, serif;
+}
+
+#updatedbookmarklet {
+  color: #999;
 }

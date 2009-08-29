@@ -1,2 +1,31 @@
 <h2>Create a grid (quick and easy)</h2>
 wadus
+
+
+<a href="javascript:(function () {
+  if(window.Reticulator) { return; }
+  var d = document 
+  ,s = d.createElement('script') 
+  ,wo = window.onload 
+  ,go = function () { 
+    new Reticulator({
+      width: 951,
+      columns: 16,
+      gutter: 9,
+      color: '#333333',
+      opacity: 0.2
+    });
+    window.onload = wo || null; 
+  }; 
+  s.src = 'http://github.com/mamuso/reticulatorjs/raw/master/reticulator.js?x='+(Math.random()); 
+  if (null === s.onreadystatechange) {
+    s.onreadystatechange = function () { 
+      if (s.readyState == 'complete') 
+      go(); 
+    }; 
+  } else {
+    s.onload = go; 
+    d.body.appendChild(s); 
+  }
+})();
+">bookmarklet</a>
