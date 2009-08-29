@@ -7,11 +7,46 @@
 
 	<title>reticulatorjs - get a grid</title>
 	
+	<link rel="stylesheet" href="/stylesheets/reticulatorjs.css" type="text/css" media="screen" charset="utf-8"/>
+	
 </head>
 
 <body>
 
-<%= yield %>
 
+  <div id="header">
+    <div class="wrapper">
+      <h1>
+        <a href="#"><span>Reticulator, get a grid</span></a>
+      </h1>
+    </div><!-- .wrapper -->
+  </div><!-- #header -->
+  <div id="content">
+    <div class="wrapper">
+      <div class="maincolumn">
+        <h2>Create a grid (quick and easy)</h2>
+        
+        <%= yield %>
+
+        
+      </div><!-- .maincolumn -->
+      <div class="sidebar">
+        sidebar
+      </div><!-- .sidebar -->
+    </div><!-- .wrapper -->      
+  </div><!-- #content -->
+  <div id="footer">
+    <p>Take a look at <a href="#">reticulator.js</a></p>
+  </div><!-- #footer -->
+
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-262914-11");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
 </body>
 </html>
