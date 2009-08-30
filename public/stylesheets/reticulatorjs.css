@@ -23,7 +23,7 @@ h2, h3, h4 {
 h2 {
   font-size: 2em;
   color: #666666;
-  padding: 0.2em;
+  padding: 1.1em 0.2em 0.2em 0.2em;
   border-bottom: 1px solid #DC6228;
 }
 p {
@@ -88,12 +88,12 @@ ul span {
   background: #FFFFFF;
 }
 #content .maincolumn {
-  padding: 20px 9px 20px 20px;
+  padding: 0 9px 20px 20px;
   float: left;
   width: 691px;
 }
 #content .sidebar {
-  padding: 20px 20px 20px 0;
+  padding: 0 20px 20px 0;
   float: left;
   width: 210px;
 }
@@ -186,4 +186,8 @@ pre {
 }
 code {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer {
+  padding: 0.3em 0 2em 0;
 }
