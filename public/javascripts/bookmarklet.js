@@ -8,10 +8,12 @@ var bookmarkletfunction = ""+
 "    new Reticulator({"+
 "      align: rtalign,"+
 "      width: rtwidth,"+
+"      offset: rtoffset,"+
 "      columns: rtcolumns,"+
 "      gutter: rtgutter,"+
 "      color: rtcolor,"+
-"      opacity: rtopacity"+
+"      opacity: rtopacity,"+
+"      zindex: rtzindex"+
 "    });"+
 "    window.onload = wo || null; "+
 "  }; "+
@@ -37,22 +39,26 @@ var setBookmarkletForm = function () {
 
 var setBookmarklet = function() {
   document.getElementById("reticulatorjsbookmarklet").href = "javascript:(function(){"+
-    "var rtalign, rtwidth, rtcolumns, rtgutter, rtcolor, rtopacity;"+
+    "var rtalign, rtwidth, rtoffset, rtcolumns, rtgutter, rtcolor, rtopacity, rtzindex;"+
     "rtalign = '" + document.getElementById("grid_align").value + "';"+
     "rtwidth = " + document.getElementById("grid_width").value + ";"+
+    "rtoffset = " + document.getElementById("grid_offset").value + ";"+
     "rtcolumns = " + document.getElementById("grid_columns").value + ";"+
     "rtgutter = " + document.getElementById("grid_gutter").value + ";"+
     "rtcolor = '" + document.getElementById("grid_color").value + "';"+
     "rtopacity = " + document.getElementById("grid_opacity").value + ";"+
+    "rtzindex = " + document.getElementById("grid_zindex").value + ";"+
     bookmarkletfunction +
   "})();"
   document.getElementById("updatedbookmarklet").innerHTML = "values: " + 
     document.getElementById("grid_align").value + " | " + 
     document.getElementById("grid_width").value + " | " + 
+    document.getElementById("grid_offset").value + " | " + 
     document.getElementById("grid_columns").value + " | " + 
     document.getElementById("grid_gutter").value + " | " + 
     document.getElementById("grid_color").value + " | " + 
-    document.getElementById("grid_opacity").value; 
+    document.getElementById("grid_opacity").value + " | " + 
+    document.getElementById("grid_zindex").value; 
 
 };
 
