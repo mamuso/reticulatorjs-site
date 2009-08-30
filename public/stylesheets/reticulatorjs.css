@@ -57,7 +57,7 @@ ul span {
 }
 #header h1 a {
   display: block;
-  width: 17.1em;
+  width: 19em;
   height: 4.7em;
   background: url('../images/reticulator_logo.gif') no-repeat center center;
 }
@@ -75,7 +75,7 @@ ul span {
 #header ul li a {
   padding: 0.7em 1.3em;
   display: block;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #000000;
   background: #EFE229;
   text-decoration: none;
@@ -97,7 +97,44 @@ ul span {
   float: left;
   width: 220px;
 }
-
+.sidebar ol {
+  padding-left: 1.5em;
+  color: #DC6228;
+  font-size: 1.8em;
+}
+.sidebar ol li {
+  padding-bottom: 1em;
+}
+.sidebar ol div{
+  font-size: x-small;
+  color: #000000;
+}
+.sidebar ol li form p {
+  padding: 0.2em 0;
+}
+.sidebar ol li form div {
+  padding: 1em 0 0 0;
+  text-align: center;
+}
+.sidebar ol li form div button {
+  padding: 0.5em 0.7em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: #FFFFFF;
+  border: none;
+  background: #DC6228;
+}
+.sidebar ol li form label {
+  font-weight: bold;
+  width: 4.8em;
+  padding-top: 0.3em;
+  float: left;
+}
+.sidebar ol li form input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  width: 9em;
+}
 .picture {
   float: right;
   margin: 0 0 1.5em 1.5em;
