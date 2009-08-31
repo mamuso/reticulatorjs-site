@@ -50,8 +50,8 @@ var bookmarkletfunction = ""+
 "go(); "+
 "}; "+
 "} else {"+
-"d.body.appendChild(sr); "+
-"d.body.appendChild(s); "+
+"if(!window.RToptions) { d.body.appendChild(sr); }"+
+"if(!window.Reticulator) { d.body.appendChild(s); }"+
 "s.onload = go; "+
 "}";
 
