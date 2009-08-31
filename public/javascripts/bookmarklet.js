@@ -29,6 +29,7 @@ var custombookmarkletfunction = ""+
 "}";
 
 var bookmarkletfunction = ""+
+"if(window.Reticulator) { return; }"+
 "var d = document "+
 ",s = d.createElement('script') "+
 ",sr = d.createElement('script') "+
@@ -51,7 +52,7 @@ var bookmarkletfunction = ""+
 "}; "+
 "} else {"+
 "d.body.appendChild(sr);"+
-"if(!window.Reticulator) { d.body.appendChild(s); }"+
+"d.body.appendChild(s);"+
 "s.onload = go; "+
 "}";
 
