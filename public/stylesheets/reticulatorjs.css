@@ -97,10 +97,19 @@ ul span {
   float: left;
   width: 210px;
 }
+.sidebar ol.first {
+  list-style-type: lower-alpha;
+}
 .sidebar ol {
   padding-left: 1.5em;
   color: #DC6228;
   font-size: 1.8em;
+}
+.sidebar ol ol{
+  padding-left: 0em;
+  color: #DC6228;
+  font-size: 1em;
+  list-style-type: none; 
 }
 .sidebar ol li {
   padding-bottom: 1em;

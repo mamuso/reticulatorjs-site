@@ -32,13 +32,30 @@ var bookmarkletfunction = ""+
 "  if(window.Reticulator) { return; }"+
 "  var d = document "+
 "  ,s = d.createElement('script') "+
-"  ,w = window "+
+"  ,sr = d.createElement('script') "+
 "  ,wo = window.onload "+
-"  ,a = function () { w.open('http://localhost:4567/bookmarkletoptions', 'RTconfig','menubar=0,toolbar=0,resizable=0,status=1,width=220,height=400');"+
-"  }; "+
+"  ,w = window "+
+"  ,a = function () {"+
+"   top.wref = window.open('', 'RTconfig','menubar=0,toolbar=0,resizable=0,status=1,width=220,height=400');"+
+"}"+
+"  ,go = function () { "+
+"    new RToptions();"+
+"    window.onload = wo || null; "+
+"   }; "+
+"     if(/Firefox/.test(navigator.userAgent)){setTimeout(a,1);}else{a();}"+
 "  s.src = 'http://github.com/mamuso/reticulatorjs/raw/master/reticulator.js?x='+(Math.random()); "+
-"  d.body.appendChild(s); "+
-"  if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0);}else{a();}"
+"  sr.src = 'http://localhost:4567/javascripts/bookmarkletoptions.js?x='+(Math.random()); "+
+"  if (null === s.onreadystatechange) {"+
+"    s.onreadystatechange = function () { "+
+"      if (s.readyState == 'complete') "+
+"      go(); "+
+"    }; "+
+"  } else {"+
+"    d.body.appendChild(sr); "+
+"    d.body.appendChild(s); "+
+"    s.onload = go; "+
+"  }";
+
 
 var setBookmarkletForm = function () {
   document.getElementById("bookmarkletform").onsubmit = function(){
@@ -66,6 +83,7 @@ var setBookmarklet = function() {
     "rtzindex = " + document.getElementById("grid_zindex").value + ";"+
     custombookmarkletfunction +
   "})();"
+  document.getElementById("customreticulatorjsbookmarklet").innerHTML = document.getElementById("grid_width").value + "/" + document.getElementById("grid_columns").value + "/" + document.getElementById("grid_gutter").value + " grid";
   document.getElementById("updatedbookmarklet").innerHTML = "values: " + 
     document.getElementById("grid_align").value + " | " + 
     document.getElementById("grid_width").value + " | " + 
