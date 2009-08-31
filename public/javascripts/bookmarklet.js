@@ -1,5 +1,5 @@
 
-var bookmarkletfunction = ""+
+var custombookmarkletfunction = ""+
 "  if(window.Reticulator) { return; }"+
 "  var d = document "+
 "  ,s = d.createElement('script') "+
@@ -16,7 +16,7 @@ var bookmarkletfunction = ""+
 "      zindex: rtzindex"+
 "    });"+
 "    window.onload = wo || null; "+
-"  }; "+
+"   }; "+
 "  s.src = 'http://github.com/mamuso/reticulatorjs/raw/master/reticulator.js?x='+(Math.random()); "+
 "  if (null === s.onreadystatechange) {"+
 "    s.onreadystatechange = function () { "+
@@ -27,6 +27,18 @@ var bookmarkletfunction = ""+
 "    s.onload = go; "+
 "    d.body.appendChild(s); "+
 "  }";
+
+var bookmarkletfunction = ""+
+"  if(window.Reticulator) { return; }"+
+"  var d = document "+
+"  ,s = d.createElement('script') "+
+"  ,w = window "+
+"  ,wo = window.onload "+
+"  ,a = function () { w.open('http://localhost:4567/bookmarkletoptions', 'RTconfig','menubar=0,toolbar=0,resizable=0,status=1,width=220,height=400');"+
+"  }; "+
+"  s.src = 'http://github.com/mamuso/reticulatorjs/raw/master/reticulator.js?x='+(Math.random()); "+
+"  d.body.appendChild(s); "+
+"  if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0);}else{a();}"
 
 var setBookmarkletForm = function () {
   document.getElementById("bookmarkletform").onsubmit = function(){
@@ -39,6 +51,10 @@ var setBookmarkletForm = function () {
 
 var setBookmarklet = function() {
   document.getElementById("reticulatorjsbookmarklet").href = "javascript:(function(){"+
+    bookmarkletfunction +
+  "})();"
+
+  document.getElementById("customreticulatorjsbookmarklet").href = "javascript:(function(){"+
     "var rtalign, rtwidth, rtoffset, rtcolumns, rtgutter, rtcolor, rtopacity, rtzindex;"+
     "rtalign = '" + document.getElementById("grid_align").value + "';"+
     "rtwidth = " + document.getElementById("grid_width").value + ";"+
@@ -48,7 +64,7 @@ var setBookmarklet = function() {
     "rtcolor = '" + document.getElementById("grid_color").value + "';"+
     "rtopacity = " + document.getElementById("grid_opacity").value + ";"+
     "rtzindex = " + document.getElementById("grid_zindex").value + ";"+
-    bookmarkletfunction +
+    custombookmarkletfunction +
   "})();"
   document.getElementById("updatedbookmarklet").innerHTML = "values: " + 
     document.getElementById("grid_align").value + " | " + 

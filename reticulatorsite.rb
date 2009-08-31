@@ -29,3 +29,7 @@ end
 get '/example_vertical' do
   erb :example_vertical
 end
+
+get '/bookmarkletoptions' do
+  erb :bookmarkletoptions, :layout => false
+end
