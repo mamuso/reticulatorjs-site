@@ -50,7 +50,7 @@ var bookmarkletfunction = ""+
 "go(); "+
 "}; "+
 "} else {"+
-"if(!window.RToptions) { d.body.appendChild(sr); }"+
+"d.body.appendChild(sr);"+
 "if(!window.Reticulator) { d.body.appendChild(s); }"+
 "s.onload = go; "+
 "}";
