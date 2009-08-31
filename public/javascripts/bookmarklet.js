@@ -44,7 +44,7 @@ var bookmarkletfunction = ""+
 "   }; "+
 "     if(/Firefox/.test(navigator.userAgent)){setTimeout(a,1);}else{a();}"+
 "  s.src = 'http://github.com/mamuso/reticulatorjs/raw/master/reticulator.js?x='+(Math.random()); "+
-"  sr.src = 'http://localhost:4567/javascripts/bookmarkletoptions.js?x='+(Math.random()); "+
+"  sr.src = 'http://reticulatorjs.mamuso.net/javascripts/bookmarkletoptions.js?x='+(Math.random()); "+
 "  if (null === s.onreadystatechange) {"+
 "    s.onreadystatechange = function () { "+
 "      if (s.readyState == 'complete') "+
