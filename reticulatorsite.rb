@@ -1,6 +1,13 @@
 require 'rubygems'
 require 'sinatra'
-require 'lib/sinatra/content_for'
+
+configure do
+  $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/lib/sinatra")
+  Dir.glob("#{File.dirname(__FILE__)}/lib/sinatra/*.rb") { |lib| 
+    require File.basename(lib, '.*') 
+  }
+end
+
 
 get '/' do
   erb :home
